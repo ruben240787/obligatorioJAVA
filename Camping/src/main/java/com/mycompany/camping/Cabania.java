@@ -1,14 +1,14 @@
 package com.mycompany.camping;
 
 public class Cabania extends Camping {
-
+    //Atributo unico de la clase.
     char nombre;
-
+    //Contructor.
     public Cabania(char nombre, String entrada, String salida, int diasEstadia, int maxPersonas, int precioPorDia) {
         super(entrada, salida, diasEstadia, maxPersonas, precioPorDia);
         this.nombre = nombre;
     }
-    
+    //Funcion para determinar el cobro de la estadia en la cabaña
     @Override
     public int cobroEstadia(int cantPersonas) {
         int cobro = 0;
@@ -19,7 +19,7 @@ public class Cabania extends Camping {
         }
         return cobro;
     }
-
+    //Getter y Setter.
     public char getNombre() {
         return nombre;
     }

@@ -16,7 +16,7 @@ public abstract class Camping {
         this.precioPorDia = precioPorDia;}
 
 
-
+    //Funcion abstracta para que sea implementada por herencia
     public abstract int cobroEstadia(int cantPersonas);
     
 

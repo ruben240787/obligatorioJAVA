@@ -16,6 +16,46 @@ public class TitularResponsable {
         this.numeroTarjeta = numeroTarjeta;
     }
     
+    public String getNombreCompleto() {
+        return nombreCompleto;
+    }
+
+    public String getNumeroDoc() {
+        return numeroDoc;
+    }
+
+    public String getNumeroTelefono() {
+        return numeroTelefono;
+    }
+
+    public boolean isUruguayo() {
+        return uruguayo;
+    }
+
+    public int getNumeroTarjeta() {
+        return numeroTarjeta;
+    }
+    
+    public void setNombreCompleto(String nombreCompleto) {
+        this.nombreCompleto = nombreCompleto;
+    }
+
+    public void setNumeroDoc(String numeroDoc) {
+        this.numeroDoc = numeroDoc;
+    }
+
+    public void setNumeroTelefono(String numeroTelefono) {
+        this.numeroTelefono = numeroTelefono;
+    }
+
+    public void setUruguayo(boolean uruguayo) {
+        this.uruguayo = uruguayo;
+    }
+
+    public void setNumeroTarjeta(int numeroTarjeta) {
+        this.numeroTarjeta = numeroTarjeta;
+    }
+    
     
     
     

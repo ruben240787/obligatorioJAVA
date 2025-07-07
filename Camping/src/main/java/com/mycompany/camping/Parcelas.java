@@ -3,14 +3,15 @@ package com.mycompany.camping;
 
 
 public class Parcelas extends Camping {
+    //Atrubuto unico de la clase.
     int identificador;    
-
+    //Contructor.
     public Parcelas(int identificador, String entrada, String salida, int diasEstadia, int maxPersonas, int precioPorDia) {
         super(entrada, salida, diasEstadia, maxPersonas, precioPorDia);
         this.identificador = identificador;
     }
 
-
+    //Funcion para determinar el cobro de la estadia en la parcela
     @Override
       public int cobroEstadia(int cantPersonas) {
         int cobro=0;
@@ -21,7 +22,7 @@ public class Parcelas extends Camping {
         }
         return cobro * diasEstadia;
     }       
-
+    //Getter y Setter.
     public int getIdentificador() {
         return identificador;
     }

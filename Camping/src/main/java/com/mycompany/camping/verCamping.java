@@ -10,7 +10,13 @@ public class verCamping {
         Scanner scanner = new Scanner(System.in);
         // Hardcodeamos las cabañas.
         Cabania [] cabanias = { new Cabania ('a',"06/07/25", "07/07/25", 10,5,5000)};
-
+        
+        // Clase Persona.
+        TitularResponsable cliente1 = new TitularResponsable ("", "0","0", true, 0);
+        cliente1.setNombreCompleto(scanner.nextLine());
+        cliente1.numeroDoc(scanner.nextLine());
+        cliente1.numeroTarjeta(scanner.nextLine());
+        cliente1.numeroTelefono(scanner.nextLine());
         int cantPersonas = 0;
         boolean entradaValida = false;
         // solicitamos la cantidad de dias de estadia.
@@ -32,7 +38,7 @@ public class verCamping {
                 scanner.next();
             }
         }
-
+        //Llamamos a la funcion cobroEstadia para mostar por pantalla el monto total a cobrar.
         int total = cabanias[1].cobroEstadia(cantPersonas);
         System.out.println("El total a pagar por la estadía es: $" + total + " en la cabaña " + cabanias[1].nombre);
     }
