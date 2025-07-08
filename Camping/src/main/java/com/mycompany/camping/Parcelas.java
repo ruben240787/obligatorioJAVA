@@ -1,15 +1,19 @@
 
 package com.mycompany.camping;
 
+import java.time.LocalDate;
+
 
 public class Parcelas extends Camping {
     //Atrubuto unico de la clase.
     int identificador;    
     //Contructor.
-    public Parcelas(int identificador, String entrada, String salida, int diasEstadia, int maxPersonas, int precioPorDia) {
+
+    public Parcelas(int identificador, LocalDate entrada, LocalDate salida, int diasEstadia, int maxPersonas, int precioPorDia) {
         super(entrada, salida, diasEstadia, maxPersonas, precioPorDia);
         this.identificador = identificador;
     }
+
 
     //Funcion para determinar el cobro de la estadia en la parcela
     @Override
@@ -23,15 +27,16 @@ public class Parcelas extends Camping {
         return cobro * diasEstadia;
     }       
     //Getter y Setter.
+
     public int getIdentificador() {
         return identificador;
     }
 
-    public String getEntrada() {
+    public LocalDate getEntrada() {
         return entrada;
     }
 
-    public String getSalida() {
+    public LocalDate getSalida() {
         return salida;
     }
 
@@ -51,11 +56,11 @@ public class Parcelas extends Camping {
         this.identificador = identificador;
     }
 
-    public void setEntrada(String entrada) {
+    public void setEntrada(LocalDate entrada) {
         this.entrada = entrada;
     }
 
-    public void setSalida(String salida) {
+    public void setSalida(LocalDate salida) {
         this.salida = salida;
     }
 
@@ -69,6 +74,12 @@ public class Parcelas extends Camping {
 
     public void setPrecioPorDia(int precioPorDia) {
         this.precioPorDia = precioPorDia;
+    }
+    
+        @Override
+    public String toString() {
+        return "Parcela  " + "N° de identificacion : " + identificador
+                + " con una capacidad maxima de "+ maxPersonas + " personas y un valor por persona de de $" + precioPorDia;
     }
     
 }

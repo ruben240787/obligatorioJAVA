@@ -55,6 +55,12 @@ public class TitularResponsable {
     public void setNumeroTarjeta(int numeroTarjeta) {
         this.numeroTarjeta = numeroTarjeta;
     }
+
+    @Override
+    public String toString() {
+        return "TitularResponsable " + " Nombre = " + nombreCompleto + ", Doc.: " + numeroDoc + ", Telefono: " + numeroTelefono
+                + ", Uruguayo: " + uruguayo + " Tarjeta N° " + numeroTarjeta;
+    }
     
     
     

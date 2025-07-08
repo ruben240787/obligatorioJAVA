@@ -1,13 +1,17 @@
 package com.mycompany.camping;
 
+import java.time.LocalDate;
+
 public class Cabania extends Camping {
     //Atributo unico de la clase.
     char nombre;
     //Contructor.
-    public Cabania(char nombre, String entrada, String salida, int diasEstadia, int maxPersonas, int precioPorDia) {
+
+    public Cabania(char nombre, LocalDate entrada, LocalDate salida, int diasEstadia, int maxPersonas, int precioPorDia) {
         super(entrada, salida, diasEstadia, maxPersonas, precioPorDia);
         this.nombre = nombre;
     }
+
     //Funcion para determinar el cobro de la estadia en la cabaña
     @Override
     public int cobroEstadia(int cantPersonas) {
@@ -20,15 +24,16 @@ public class Cabania extends Camping {
         return cobro;
     }
     //Getter y Setter.
+
     public char getNombre() {
         return nombre;
     }
 
-    public String getEntrada() {
+    public LocalDate getEntrada() {
         return entrada;
     }
 
-    public String getSalida() {
+    public LocalDate getSalida() {
         return salida;
     }
 
@@ -48,11 +53,11 @@ public class Cabania extends Camping {
         this.nombre = nombre;
     }
 
-    public void setEntrada(String entrada) {
+    public void setEntrada(LocalDate entrada) {
         this.entrada = entrada;
     }
 
-    public void setSalida(String salida) {
+    public void setSalida(LocalDate salida) {
         this.salida = salida;
     }
 
@@ -67,6 +72,14 @@ public class Cabania extends Camping {
     public void setPrecioPorDia(int precioPorDia) {
         this.precioPorDia = precioPorDia;
     }
+    
+
+    @Override
+    public String toString() {
+        return "Cabania  " + "nombre : " + nombre + " con una capacidad maxima de "+ maxPersonas
+                + " personas y un valor por dias de $" + precioPorDia;
+    }
+    
 
     
 }
