@@ -1,6 +1,5 @@
-com\mycompany\camping\Camping.class
-com\mycompany\camping\Cabania.class
 com\mycompany\camping\Parcelas.class
-com\mycompany\camping\scanner.class
+com\mycompany\camping\Camping.class
+com\mycompany\camping\VerCamping.class
+com\mycompany\camping\Cabania.class
 com\mycompany\camping\TitularResponsable.class
-com\mycompany\camping\verCamping.class

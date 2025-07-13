@@ -1,34 +1,36 @@
+
 package com.mycompany.camping;
 
 import java.time.LocalDate;
 
-public class Cabania extends Camping {
-    //Atributo unico de la clase.
-    char nombre;
+
+public class Parcela extends Camping {
+    //Atrubuto unico de la clase.
+    int identificador;
     TitularResponsable cliente;
     //Contructor.
 
-    public Cabania(char nombre, TitularResponsable cliente, LocalDate entrada, LocalDate salida, int diasEstadia, int maxPersonas, int precioPorDia, boolean disponible) {
+    public Parcela(int identificador, TitularResponsable cliente, LocalDate entrada, LocalDate salida, int diasEstadia, int maxPersonas, int precioPorDia, boolean disponible) {
         super(entrada, salida, diasEstadia, maxPersonas, precioPorDia, disponible);
-        this.nombre = nombre;
+        this.identificador = identificador;
         this.cliente = cliente;
     }
 
-     //Funcion para determinar el cobro de la estadia en la cabaña
+    //Funcion para determinar el cobro de la estadia en la parcela
     @Override
-    public int cobroEstadia(int cantPersonas) {
-        int cobro = 0;
+      public int cobroEstadia(int cantPersonas) {
+        int cobro=0;
         if (cantPersonas <= maxPersonas) {
-            cobro = precioPorDia * diasEstadia;
+            cobro = cantPersonas * precioPorDia;
         } else{
             System.out.println("La personas ingredadas superan el maximo permitido");
         }
-        return cobro;
-    }
+        return cobro * diasEstadia;
+    }       
     //Getter y Setter.
 
-    public void setNombre(char nombre) {
-        this.nombre = nombre;
+    public void setIdentificador(int identificador) {
+        this.identificador = identificador;
     }
 
     public void setCliente(TitularResponsable cliente) {
@@ -59,8 +61,8 @@ public class Cabania extends Camping {
         this.disponible = disponible;
     }
 
-    public char getNombre() {
-        return nombre;
+    public int getIdentificador() {
+        return identificador;
     }
 
     public TitularResponsable getCliente() {
@@ -91,9 +93,12 @@ public class Cabania extends Camping {
         return disponible;
     }
 
-    @Override
+
+    
+        @Override
     public String toString() {
-        return "Cabania  " + "nombre : " + nombre + " con una capacidad maxima de "+ maxPersonas
-                + " personas y un valor por dias de $" + precioPorDia;
-    }   
+        return "Parcela  " + "N° de identificacion : " + identificador
+                + " con una capacidad maxima de "+ maxPersonas + " personas y un valor por persona de de $" + precioPorDia;
+    }
+    
 }

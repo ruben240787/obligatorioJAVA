@@ -5,10 +5,10 @@ public class TitularResponsable {
     String nombreCompleto;
     String numeroDoc;
     String numeroTelefono;
-    boolean uruguayo;
+    String uruguayo;
     int numeroTarjeta;
 
-    public TitularResponsable(String nombreCompleto, String numeroDoc, String numeroTelefono, boolean uruguayo, int numeroTarjeta) {
+    public TitularResponsable(String nombreCompleto, String numeroDoc, String numeroTelefono, String uruguayo, int numeroTarjeta) {
         this.nombreCompleto = nombreCompleto;
         this.numeroDoc = numeroDoc;
         this.numeroTelefono = numeroTelefono;
@@ -28,7 +28,7 @@ public class TitularResponsable {
         return numeroTelefono;
     }
 
-    public boolean isUruguayo() {
+    public String isUruguayo() {
         return uruguayo;
     }
 
@@ -48,7 +48,7 @@ public class TitularResponsable {
         this.numeroTelefono = numeroTelefono;
     }
 
-    public void setUruguayo(boolean uruguayo) {
+    public void setUruguayo(String uruguayo) {
         this.uruguayo = uruguayo;
     }
 
@@ -59,10 +59,6 @@ public class TitularResponsable {
     @Override
     public String toString() {
         return "TitularResponsable " + " Nombre = " + nombreCompleto + ", Doc.: " + numeroDoc + ", Telefono: " + numeroTelefono
-                + ", Uruguayo: " + uruguayo + " Tarjeta N° " + numeroTarjeta;
-    }
-    
-    
-    
-    
+                + ", Nacionalidad: " + uruguayo + " Tarjeta N° " + numeroTarjeta;
+    }    
 }
